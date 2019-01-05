@@ -1,0 +1,12 @@
+<%!JSONArray jsonArray=new JSONArray();
+JSONObject jsonObject=new JSONObject();%>
+<%
+ResultDao resultDao=new ResultDao();
+//String str=resultDao.returnResult(10000);
+jsonArray=resultDao.returnResult1(Integer.valueOf(session.getAttribute("userid").toString()).intValue());
+//jsonObject=null;
+jsonObject=jsonArray.getJSONObject(0);
+%>
+
+
+正则表达式   .到底能匹配哪些字符
